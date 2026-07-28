@@ -52,21 +52,44 @@
 // console.log("Two");
 // console.log("Three");
 
-setTimeout(() => {
-    console.log("One");
-    setTimeout(() => {
-        console.log("Two");
-        setTimeout(() => {
-            console.log("Three");
-            setTimeout(() => {
-                console.log("Four");
-                setTimeout(() => {
-                    console.log("Five");
-                    setTimeout(() => {
-                        console.log("Six");
-                    }, 1000);
-                }, 1000);
-            }, 1000);
-        }, 1000);
-    }, 1000);
-}, 1000);                
+// setTimeout(() => {
+//     console.log("One");
+//     setTimeout(() => {
+//         console.log("Two");
+//         setTimeout(() => {
+//             console.log("Three");
+//             setTimeout(() => {
+//                 console.log("Four");
+//                 setTimeout(() => {
+//                     console.log("Five");
+//                     setTimeout(() => {
+//                         console.log("Six");
+//                     }, 1000);
+//                 }, 1000);
+//             }, 1000);
+//         }, 1000);
+//     }, 1000);
+// }, 1000);            
+
+const mypromise = new Promise((resolve,reject)=>{
+    const username = "Adarsh";
+    const password = "12345";
+    if(username=="Adarsh"&&password=="12345"){
+        resolve("Login Success");
+    }
+    else{
+        reject("Invalid username or password");
+    }
+
+}
+)
+
+mypromise.then((msg)=>
+    {
+    console.log(msg);
+}).catch((msg)=>{
+
+    console.log(msg);
+}).finally(()=>{
+    console.log("All done");
+})
