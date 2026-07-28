@@ -84,12 +84,24 @@ const mypromise = new Promise((resolve,reject)=>{
 }
 )
 
-mypromise.then((msg)=>
-    {
-    console.log(msg);
-}).catch((msg)=>{
+// mypromise.then((msg)=>
+//     {
+//     console.log(msg);
+// }).catch((msg)=>{
 
-    console.log(msg);
-}).finally(()=>{
-    console.log("All done");
-})
+//     console.log(msg);
+// }).finally(()=>{
+//     console.log("All done");
+// })
+
+async function handledata(){
+    try{
+      await mypromise;
+    }catch(err){
+        console.log(err);
+    }
+    finally{
+        console.log("All done");
+    }
+}
+handledata();
