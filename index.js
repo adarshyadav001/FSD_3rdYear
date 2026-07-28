@@ -52,20 +52,21 @@
 // console.log("Two");
 // console.log("Three");
 
-setTimeout(()=>{
-    console.log("One")
-}setTimeout(()=>{ 
-    console.log("Two")
-}setTimeout(()=>{
-    console.log("Three")
-    setTimeout(()=>{    
-        console.log("Four")
-        setTimeout(()=>{
-            console.log("Five")      
-            setTimeout(()=>{
-                console.log("Six")
-            }
-            ,1000);
-        },1000);
-    },1000);
-},1000);                
+setTimeout(() => {
+    console.log("One");
+    setTimeout(() => {
+        console.log("Two");
+        setTimeout(() => {
+            console.log("Three");
+            setTimeout(() => {
+                console.log("Four");
+                setTimeout(() => {
+                    console.log("Five");
+                    setTimeout(() => {
+                        console.log("Six");
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 1000);
+}, 1000);                
