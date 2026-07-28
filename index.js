@@ -78,7 +78,7 @@ const mypromise = new Promise((resolve,reject)=>{
         resolve("Login Success");
     }
     else{
-        reject("Invalid username or password");
+        reject("Invalid username or password incorrect");
     }
 
 }
