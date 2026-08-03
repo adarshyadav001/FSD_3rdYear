@@ -94,14 +94,44 @@ const mypromise = new Promise((resolve,reject)=>{
 //     console.log("All done");
 // })
 
-async function handledata(){
-    try{
-      await mypromise;
-    }catch(err){
-        console.log(err);
-    }
-    finally{
-        console.log("All done");
-    }
+// async function handledata(){
+//     try{
+//       await mypromise;
+//     }catch(err){
+//         console.log(err);
+//     }
+//     finally{
+//         console.log("All done");
+//     }
+// }
+// handledata();
+
+// const orderRecived = new Promise((resolve,reject)=>{
+//     if(true){
+//         resolve("Order recived");
+//     }
+//     else{
+//         reject("Order failed");
+//     }
+// }
+// )
+// async function orderHandel(){
+//     try{
+//         const result = await orderRecived;
+//         console.log(result);
+//     }catch(error){
+//         console.log(error);
+//     }finally{
+//         console.log("All done");
+//     }
+// }
+// orderHandel();
+
+
+async function fetchData(){
+    const serverData = await fetch('https://fakestoreapi.com/products/1')
+    console.log(serverData);
+
+
 }
-handledata();
+fetchData();
