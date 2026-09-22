@@ -1,4 +1,3 @@
-import React from 'react'
 import pic from '../assets/react.svg'
 
 function ICard({ name, roll, branch, college }) {

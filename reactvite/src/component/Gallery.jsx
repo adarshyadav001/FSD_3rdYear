@@ -1,4 +1,3 @@
-import React from 'react'
 import Icard from './ICard'
 
 function Gallery() {
